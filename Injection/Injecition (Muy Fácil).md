@@ -1,6 +1,6 @@
 Lo primero que hice fue realizar un escaneo general sobre la IP de la víctima para identificar qué puertos tenía abiertos.
 
-![Escaneo Nmap] (Pasted image 20250727223236.png)
+![Escaneo Nmap](nmap.png)
 
 Los parámetros utilizados son los siguientes:
 
@@ -18,11 +18,11 @@ Con estos parámetros pude identificar que la víctima tenía abiertos los puert
 
 Luego accedemos a la página web, donde nos encontramos con un panel de login.
 
-![Panel Login](Pasted image 20250727223902.png)
+![Panel Login](Login.png)
 
 Gracias al nombre de la máquina pude inferir que la técnica a utilizar sería SQL Injection.
 
-![SQL Injection](Pasted image 20250727224149.png)
+![SQL Injection](SQLi.png)
 
 Probamos el parámetro:
 
@@ -30,16 +30,16 @@ Probamos el parámetro:
 
 Este payload permite omitir la verificación de contraseña y realizar un inicio de sesión sin necesidad de conocer la clave, siempre y cuando el backend no valide correctamente las entradas del usuario.
 
-![Bypass Login](Pasted image 20250727224259.png)
+![Bypass Login](SQLR.png)
 
 Gracias a esto pude bypassear el login de manera exitosa y obtener la contraseña del usuario Dylan.
 
 Ahora, utilizando estas credenciales, intentamos realizar una conexión mediante SSH con el usuario y contraseña obtenidos.
 
-![Conexion SSH](Pasted image 20250727224631.png)
+![Conexion SSH](SSH.png)
 
 Listo, ya tenemos acceso al sistema mediante SSH. Ahora solamente quedaría realizar una escalada de privilegios para obtener acceso total al sistema.
 
-![Escalada de Privilegios](Pasted image 20250727225332.png)
+![Escalada de Privilegios](Root.png)
 
 ¡Hemos alcanzado el máximo nivel de privilegios en el sistema!
