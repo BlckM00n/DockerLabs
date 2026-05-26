@@ -1,5 +1,6 @@
 lo primero que hice fue escaneo general sobre la ip de la victima para ver que puertos que tiene abiertos.
-![[Pasted image 20250727223236.png]]Los parámetros utilizados son los siguiente:
+![Texto](Pasted image 20250727223236.png)
+Los parámetros utilizados son los siguiente:
 -p-:	Escanea todos los 65535 puertos TCP, desde el 1 al 65535.
 --open:	Muestra solo los puertos abiertos, omite los cerrados o filtrados.
 -sT:	Realiza un TCP connect scan (conexión completa con el sistema operativo).
