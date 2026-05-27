@@ -9,7 +9,7 @@
 
 # 📌 Descripción
 
-Máquina de dificultad **Fácil** donde explotamos un archivo PHP oculto, realizamos fuerza bruta al servicio SSH y abusamos de permisos sudo sobre el binario `vim` para escalar privilegios a root.
+Máquina de dificultad **Fácil** donde realizamos enumeración de servicios, fuerza bruta SSH y escalada de privilegios abusando de permisos sudo en `vim`.
 
 ---
 
@@ -17,43 +17,43 @@ Máquina de dificultad **Fácil** donde explotamos un archivo PHP oculto, realiz
 
 ## Escaneo de puertos
 
-nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn <IP> -oG allPorts
+nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 172.18.0.2 -oG allPorts
 
-![Nmap](Trust_nmap.png)
+![[nmap2.png]]
 
 ---
 
 ## Enumeración web
 
-### Fuzzing con Gobuster
+### Gobuster
 
-gobuster dir -u http://<IP> -w <WORDLIST> -x php,html,txt -t 20
+gobuster dir -u http://172.18.0.2 -w <WORDLIST> -x php,html,txt -t 20
 
-![Gobuster](Gobuster_trust.png)
+![[Gobuster2.png]]
 
 ---
 
-## Análisis con curl
+## Análisis web
 
-curl http://<IP>
+curl http://172.18.0.2
 
-![Curl](Curl_trust.png)
+![[Curl2.png]]
 
 ---
 
 # 🔐 Ataque SSH
 
-hydra -l mario -P <WORDLIST> ssh://<IP> -t 4
+hydra -l mario -P <WORDLIST> ssh://172.18.0.2 -t 4
 
-![Hydra](Hydra_trust.png)
+![[Hydra2.png]]
 
 ---
 
 ## Acceso SSH
 
-ssh mario@<IP>
+ssh mario@172.18.0.2
 
-![SSH](Ssh_trust.png)
+![[SSH2.png]]
 
 ---
 
@@ -63,16 +63,16 @@ ssh mario@<IP>
 
 sudo -l
 
-📸 Captura: [AQUI_SUDO]
+![[Sudo2.png]]
 
 ---
 
-## Escalada a root
+## Root
 
 whoami  
 id  
 
-![Root](Root_trust.png)
+![[Root2.png]]
 
 ---
 
@@ -82,17 +82,17 @@ id
 |---|---|---|
 | Nmap | Escaneo | Puertos 22/80 |
 | Gobuster | Fuzzing web | Descubrimiento |
-| Curl | Enumeración | Usuario |
-| Hydra | Brute force | Credenciales |
-| SSH | Acceso | mario |
+| Curl | Enumeración | Info usuario |
+| Hydra | Fuerza bruta | Credenciales |
+| SSH | Acceso inicial | mario |
 | sudo -l | Priv esc | vim permitido |
-| Vim | Root | acceso total |
+| Vim | Root | control total |
 
 ---
 
 # 🧠 Notas
 
-- Enumerar siempre antes de explotar
-- Revisar web primero
-- Validar wordlists
+- Enumerar siempre primero
+- Revisar web antes de atacar SSH
+- Validar credenciales reutilizadas
 - Revisar sudo antes de escalar
