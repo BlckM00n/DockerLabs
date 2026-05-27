@@ -96,5 +96,3 @@ id
 - Revisar web primero
 - Validar wordlists
 - Revisar sudo antes de escalar
-
-![[Trust_nmap.png]]
