@@ -1,3 +1,4 @@
+
 # DockerLabs - Trust Walkthrough
 
 [![DockerLabs](https://img.shields.io/badge/DockerLabs-Trust-blue)](https://dockerlabs.es)
@@ -18,7 +19,7 @@ Máquina de dificultad **Fácil** donde explotamos un archivo PHP oculto, realiz
 
 nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn <IP> -oG allPorts
 
-![[Nmap_trust.png]]
+📸 Captura: [AQUI_NMAP]
 
 ---
 
@@ -28,7 +29,7 @@ nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn <IP> -oG allPorts
 
 gobuster dir -u http://<IP> -w <WORDLIST> -x php,html,txt -t 20
 
-![[Gobuster_trust.png]]
+📸 Captura: [AQUI_GOBUSTER]
 
 ---
 
@@ -36,7 +37,7 @@ gobuster dir -u http://<IP> -w <WORDLIST> -x php,html,txt -t 20
 
 curl http://<IP>
 
-![[Curl_trust.png]]
+📸 Captura: [AQUI_CURL]
 
 ---
 
@@ -44,7 +45,7 @@ curl http://<IP>
 
 hydra -l mario -P <WORDLIST> ssh://<IP> -t 4
 
-![[Hydra_trust.png]]
+📸 Captura: [AQUI_HYDRA]
 
 ---
 
@@ -52,7 +53,7 @@ hydra -l mario -P <WORDLIST> ssh://<IP> -t 4
 
 ssh mario@<IP>
 
-![[Ssh_trust.png]]
+📸 Captura: [AQUI_SSH]
 
 ---
 
@@ -62,7 +63,7 @@ ssh mario@<IP>
 
 sudo -l
 
-![[Sudo_trust.png]]
+📸 Captura: [AQUI_SUDO]
 
 ---
 
@@ -71,7 +72,7 @@ sudo -l
 whoami  
 id  
 
-![[Root_trust.png]]
+📸 Captura: [AQUI_ROOT]
 
 ---
 
@@ -91,7 +92,9 @@ id
 
 # 🧠 Notas
 
-- Usar enumeración antes de explotar
-- Revisar siempre web primero
+- Enumerar siempre antes de explotar
+- Revisar web primero
 - Validar wordlists
-- Probar sudo siempre antes de escalar
+- Revisar sudo antes de escalar
+
+![[Trust_nmap.png]]
