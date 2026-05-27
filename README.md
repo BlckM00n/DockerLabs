@@ -5,10 +5,15 @@ Repositorio personal de Writeups, Cheatsheets y notas de Pentesting.
 </p>
 
 <p align="center">
+
 <img src="https://img.shields.io/badge/OS-ArchLinux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white">
+
 <img src="https://img.shields.io/badge/Platform-DockerLabs-2496ED?style=for-the-badge&logo=docker&logoColor=white">
+
 <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge">
+
 <img src="https://img.shields.io/badge/Focus-Pentesting-red?style=for-the-badge">
+
 </p>
 
 ---
@@ -17,7 +22,7 @@ Repositorio personal de Writeups, Cheatsheets y notas de Pentesting.
 
 ## 🛠 Cheatsheets
 
-- [Pentest Cheatsheet](Pentest-Cheatsheet.md)
+- [Pentesting Notes](Pentesting-Notes.md)
 
 ---
 
@@ -47,7 +52,7 @@ Este proyecto tiene como finalidad:
 
 <p align="center">
 
-<img src="https://skillicons.dev/icons?i=linux,bash,git,github,vscode,docker,python" />
+<img src="https://skillicons.dev/icons?i=linux,bash,git,github,docker,python,vscode" />
 
 </p>
 
@@ -76,11 +81,11 @@ Este proyecto tiene como finalidad:
 
 ---
 
-# 📈 Estadísticas GitHub
+# 📈 GitHub Stats
 
 <p align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=BlckM00n&show_icons=true&theme=tokyonight" />
+<img src="https://github-readme-stats.vercel.app/api?username=BlckM00n&show_icons=true&theme=tokyonight&hide_border=true" />
 
 </p>
 
@@ -98,7 +103,9 @@ No se promueve el uso de estas técnicas en sistemas sin autorización.
 <p align="center">
 
 <a href="https://github.com/BlckM00n">
+
 <img src="https://img.shields.io/badge/GitHub-BlckM00n-black?style=for-the-badge&logo=github">
+
 </a>
 
 </p>
