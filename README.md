@@ -32,13 +32,13 @@ Repositorio personal de Writeups, Cheatsheets y notas de Pentesting.
 |---|---|---|---|
 | Injection | 🟢 Fácil | ✅ | [Ver](Injection/Injecition.md) |
 | Trust | 🔵 Muy Fácil | ✅ | [Ver](Trust/Trust.md) |
-| BreakMySSH | 🔵 Muy Fácil | 🔄 | [Ver](BreakMySSH/BreakMySSH.md) |
+| BreakMySSH | 🔵 Muy Fácil | ✅ | [Ver](BreakMySSH/BreakMySSH.md) |
 | FirstHacking | 🔵 Muy Fácil | ✅ | [Ver](FirstHacking/FirstHacking.md) |
-| HedgeHog | 🔵 Muy Fácil | 🔄 | [Ver](HedgeHog/HedgeHog.md) |
+| HedgeHog | 🔵 Muy Fácil | ✅ | [Ver](HedgeHog/HedgeHog.md) |
 | BoruzuwarahCTF | 🔵 Muy Fácil | ✅ | [Ver](BorazuwarahCTF/BorazuwarahCTF.md) |
-| Tproot | 🔵 Muy Fácil | 🔄 | [Ver](Tproot/Tproot.md) |
-| Vacaciones | 🔵 Muy Fácil | 🔄 | [Ver](Vacaciones/Vacaciones.md) |
-| Obsession | 🔵 Muy Fácil | 🔄 | [Ver](Obsession/Obsession.md) |
+| Tproot | 🔵 Muy Fácil | ✅ | [Ver](Tproot/Tproot.md) |
+| Vacaciones | 🔵 Muy Fácil | ✅ | [Ver](Vacaciones/Vacaciones.md) |
+| Obsession | 🔵 Muy Fácil | ✅ | [Ver](Obsession/Obsession.md) |
 
 ---
 
