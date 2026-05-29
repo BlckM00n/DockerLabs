@@ -30,9 +30,15 @@ Repositorio personal de Writeups, Cheatsheets y notas de Pentesting.
 
 | Máquina | Dificultad | Estado | Writeup |
 |---|---|---|---|
-| Injection | 🟢 Muy Fácil | ✅ | [Ver](Injection/Injection().md) |
+| Injection | 🔵 Fácil | ✅ | [Ver](Injection/Injection.md) |
 | Trust | 🟢 Muy Fácil | ✅ | [Ver](Trust/Trust.md) |
-| Library | 🟡 Fácil | 🔄 | Pendiente |
+| BreakMySSH | 🟢 Muy Fácil | 🔄 | [Ver](Trust/Trust.md) |
+| FirstHacking | 🟢 Muy Fácil | 🔄 | [Ver](Trust/Trust.md) |
+| HedgeHog | 🟢 Muy Fácil | 🔄 | [Ver](Trust/Trust.md) |
+| BoruzuarahCTF | 🟢 Muy Fácil | 🔄 | [Ver](Trust/Trust.md) |
+| Tproot | 🟢 Muy Fácil | 🔄 | [Ver](Trust/Trust.md) |
+| Vacaciones | 🟢 Muy Fácil | 🔄 | [Ver](Trust/Trust.md) |
+| Obsession | 🟢 Muy Fácil | 🔄 | [Ver](Trust/Trust.md) |
 
 ---
 
