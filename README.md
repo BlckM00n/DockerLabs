@@ -30,8 +30,8 @@ Repositorio personal de Writeups, Cheatsheets y notas de Pentesting.
 
 | Máquina | Dificultad | Estado | Writeup |
 |---|---|---|---|
-| Injection | 🟢 Muy Fácil | ✅ | [Ver](Injection/README.md) |
-| Trust | 🟢 Muy Fácil | ✅ | [Ver](Trust/README.md) |
+| Injection | 🟢 Muy Fácil | ✅ | [Ver](Injection/Injection().md) |
+| Trust | 🟢 Muy Fácil | ✅ | [Ver](Trust/Trust.md) |
 | Library | 🟡 Fácil | 🔄 | Pendiente |
 
 ---
