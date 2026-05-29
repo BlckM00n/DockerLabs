@@ -35,7 +35,7 @@ Repositorio personal de Writeups, Cheatsheets y notas de Pentesting.
 | BreakMySSH | 🔵 Muy Fácil | 🔄 | [Ver](BreakMySSH/BreakMySSH.md) |
 | FirstHacking | 🔵 Muy Fácil | ✅ | [Ver](FirstHacking/FirstHacking.md) |
 | HedgeHog | 🔵 Muy Fácil | 🔄 | [Ver](HedgeHog/HedgeHog.md) |
-| BoruzuwarahCTF | 🔵 Muy Fácil | ✅ | [Ver](BoruzuwarahCTF/BoruzuwarahCTF.md) |
+| BoruzuwarahCTF | 🔵 Muy Fácil | ✅ | [Ver](BorazuwarahCTF/BoruzuwarahCTF.md) |
 | Tproot | 🔵 Muy Fácil | 🔄 | [Ver](Tproot/Tproot.md) |
 | Vacaciones | 🔵 Muy Fácil | 🔄 | [Ver](Vacaciones/Vacaciones.md) |
 | Obsession | 🔵 Muy Fácil | 🔄 | [Ver](Obsession/Obsession.md) |
